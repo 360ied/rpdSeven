@@ -19,7 +19,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	
+
 	registerEventHandlers(bot)
 
 	err = bot.Open()
@@ -55,7 +55,7 @@ func registerEventHandlers(bot *discordgo.Session) {
 	bot.AddHandler(guildMemberRemoveEventHandler)
 	bot.AddHandler(guildMemberUpdateEventHandler)
 	bot.AddHandler(guildMembersChunkEventHandler)
-	bot.AddHandler(guildRolesCreateEventHandler)
+	bot.AddHandler(guildRoleCreateEventHandler)
 	bot.AddHandler(guildRoleDeleteEventHandler)
 	bot.AddHandler(guildRoleUpdateEventHandler)
 	bot.AddHandler(guildUpdateEventHandler)
@@ -119,7 +119,7 @@ func guildMemberUpdateEventHandler(session *discordgo.Session, event *discordgo.
 
 func guildMembersChunkEventHandler(session *discordgo.Session, event *discordgo.GuildMembersChunk) {}
 
-func guildRolesCreateEventHandler(session *discordgo.Session, event *discordgo.GuildRoleCreate) {}
+func guildRoleCreateEventHandler(session *discordgo.Session, event *discordgo.GuildRoleCreate) {}
 
 func guildRoleDeleteEventHandler(session *discordgo.Session, event *discordgo.GuildRoleDelete) {}
 
