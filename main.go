@@ -7,7 +7,7 @@ import (
 
 	"github.com/bwmarrin/discordgo"
 
-	"rpdSeven/discordextended"
+	"rpdSeven/discordextended/cache"
 	"rpdSeven/keepalive"
 )
 
@@ -21,7 +21,7 @@ func main() {
 		panic(err)
 	}
 
-	discordextended.RegisterEventHandlers(bot)
+	cache.RegisterEventHandlers(bot)
 
 	err = bot.Open()
 
